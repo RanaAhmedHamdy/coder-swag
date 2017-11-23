@@ -89,17 +89,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="TgM-ha-psC"/>
                     <connections>
                         <outlet property="categoryTableView" destination="ZXY-Li-VrV" id="pwK-67-XNV"/>
-                        <segue destination="zL1-o7-dDS" kind="show" id="ZpL-hz-KIr"/>
+                        <segue destination="zL1-o7-dDS" kind="show" identifier="productsVCSegue" id="ZpL-hz-KIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="239.19999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="Hbt-aL-Mqw">
             <objects>
-                <viewController id="zL1-o7-dDS" sceneMemberID="viewController">
+                <viewController id="zL1-o7-dDS" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1c1-gF-Vvr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UDB-VR-fgl">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="UDB-VR-fgl" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="176" height="246"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -165,6 +165,11 @@
                                             <constraint firstItem="a20-n2-HWf" firstAttribute="leading" secondItem="UDB-VR-fgl" secondAttribute="leading" constant="5" id="u5x-8s-rp9"/>
                                             <constraint firstAttribute="trailing" secondItem="xt9-LT-eMY" secondAttribute="trailing" id="y1d-GV-l0x"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="productImage" destination="xt9-LT-eMY" id="LxU-g9-SZ1"/>
+                                            <outlet property="productName" destination="YqL-CG-bKj" id="urV-dQ-LqU"/>
+                                            <outlet property="productPrice" destination="a20-n2-HWf" id="u0B-S7-8B0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -180,10 +185,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D8d-0R-eyz"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="qbv-Qm-Kyq" id="Jgs-wv-FaI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwf-G9-CoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="116.49175412293854"/>
+            <point key="canvasLocation" x="993" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6vQ-wU-Q8e">
